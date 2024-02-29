@@ -155,21 +155,21 @@ RegisterCommand("holster", function(source, args, raw)
 	-- No Holster
     if args[1] == '0' then
 		holster = 0
-        exports['okokNotify']:Alert("Holster", "Holster abgelegt!", 3000, 'info')
+        exports['okokNotify']:Alert("Holster", "Holster removed!", 3000, 'info')
 	-- Chain 8
     elseif args[1] == '1' then
 		holster = 1
-        exports['okokNotify']:Alert("Holster", "Hüftholster angelegt!", 3000, 'info')
+        exports['okokNotify']:Alert("Holster", "Holster 1 applied!", 3000, 'info')
 	-- Chain 6
     elseif args[1] == '2' then
 		holster = 2
-        exports['okokNotify']:Alert("Holster", "Hüftholster angelegt!", 3000, 'info')
+        exports['okokNotify']:Alert("Holster", "Holster 2 applied!", 3000, 'info')
 	-- T-shirt 15
     elseif args[1] == '3' then
 		holster = 4
-        exports['okokNotify']:Alert("Holster", "Beinholster angelegt!", 3000, 'info')
+        exports['okokNotify']:Alert("Holster", "Holster 3 applied!", 3000, 'info')
 		    else
-        exports['okokNotify']:Alert("Holster", "Benutze /holster 0-3!", 3000, 'error')
+        exports['okokNotify']:Alert("Holster", "Use /holster 0-3!", 3000, 'error')
     end
 end, false)
 
@@ -177,13 +177,13 @@ end, false)
 RegisterCommand("sex", function(source, args, raw)
     if args[1] == 'm' then
 		sex = 0
-		exports['okokNotify']:Alert("Holster", "Männliches Holster angelegt!", 3000, 'info')
+		exports['okokNotify']:Alert("Holster", "Sex set to male!", 3000, 'info')
     elseif args[1] == 'f' then
 		sex = 1
-		exports['okokNotify']:Alert("Holster", "Weibliches Holster angelegt!", 3000, 'info')
+		exports['okokNotify']:Alert("Holster", "Sex set to female!", 3000, 'info')
 
 	else
-        exports['okokNotify']:Alert("Holster", "Benutze /sex m/f!", 3000, 'error')
+        exports['okokNotify']:Alert("Holster", "Use /sex m/f!", 3000, 'error')
     end
 end, false)
 
@@ -284,7 +284,7 @@ function drawWeaponLarge(ped, newWeapon)
         hasWeaponL = true
     elseif not isNearTrunk() then
         SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-        exports['okokNotify']:Alert("Holster", "Du musst an einem Kofferraum stehen, um diese Waffe zu entnehmen!", "3000", 'warning')
+        exports['okokNotify']:Alert("Holster", "You have to stand near a trunk to take out that Weapon!", "3000", 'warning')
     else
         blocked = true
         removeWeaponOnBack()
@@ -422,7 +422,7 @@ function rackWeapon()
 		WeaponL = GetHashKey("WEAPON_UNARMED")
 		hasWeaponL = false
 	else
-		exports['okokNotify']:Alert("Holster", "Du musst an einem Kofferraum stehen, um diese Waffe einzupacken!", 3000, 'warning')
+		exports['okokNotify']:Alert("Holster", "You have to stand near a trunk to stow that weapon!", 3000, 'warning')
 	end
 	racking = false
 end
