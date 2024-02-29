@@ -1,4 +1,4 @@
--- Author: Otacon
+-- Author: Otacon & f41th
 -- Github: https://github.com/Dr-Otacon/esx_holster
 
 ----------GANG ANIMATION WEAPONS----------
