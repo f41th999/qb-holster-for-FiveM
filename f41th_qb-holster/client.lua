@@ -321,8 +321,9 @@ function checkWeaponLarge(ped, newWeapon)
 end
 
 --- Starts animation for trunk
-local Player = QBCore.Functions.GetPlayerData()
-local jobname = Player.job.name
+local src = source
+local xPlayer = QBCore.Functions.GetPlayer(src)
+local jobname = xPlayer.PlayerData.Job
 function startAnim(lib, anim)
 	RequestAnimDict(lib)
 	while not HasAnimDictLoaded( lib) do
