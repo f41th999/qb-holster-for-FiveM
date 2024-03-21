@@ -141,6 +141,9 @@ Citizen.CreateThread(function()
     end
 end)
 Wait(1000)
+exports('GetCoreObject', function()
+    return QBCore
+end)
 local QBCore = exports['qb-core']:GetObject()
 
 local Player = QBCore.Functions.GetPlayerData()
