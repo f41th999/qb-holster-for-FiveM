@@ -141,7 +141,8 @@ Citizen.CreateThread(function()
     end
 end)
 Wait(1000)
-
+local QBCore = exports['qb-core']:GetObject()
+return QBCore
 local Player = QBCore.Functions.GetPlayerData()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
