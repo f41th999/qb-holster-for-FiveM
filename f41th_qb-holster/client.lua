@@ -131,6 +131,7 @@ local holsterButton 	= 20
 local handOnHolster 	= false
 local holsterHold			= false
 local ped							= PlayerPedId()
+local Player = QBCore.Functions.GetPlayerData()
 -----------------------
  
 Citizen.CreateThread(function()
@@ -313,8 +314,8 @@ function checkWeaponLarge(ped, newWeapon)
 end
 
 --- Starts animation for trunk
-
-local jobname = xPlayer.job.name
+local Player = QBCore.Functions.GetPlayerData()
+local jobname = Player.job.name
 function startAnim(lib, anim)
 	RequestAnimDict(lib)
 	while not HasAnimDictLoaded( lib) do
