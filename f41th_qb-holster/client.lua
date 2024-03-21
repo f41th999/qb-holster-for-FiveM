@@ -131,15 +131,18 @@ local holsterButton 	= 20
 local handOnHolster 	= false
 local holsterHold			= false
 local ped							= PlayerPedId()
-local Player = QBCore.Functions.GetPlayerData()
+
 -----------------------
- 
+
 Citizen.CreateThread(function()
     while QBCore == nil do
         TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
         Citizen.Wait(0)
     end
 end)
+Wait(1000)
+
+local Player = QBCore.Functions.GetPlayerData()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(xPlayer)
