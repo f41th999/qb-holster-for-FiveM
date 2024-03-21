@@ -313,6 +313,8 @@ function checkWeaponLarge(ped, newWeapon)
 end
 
 --- Starts animation for trunk
+
+local jobname = xPlayer.job.name
 function startAnim(lib, anim)
 	RequestAnimDict(lib)
 	while not HasAnimDictLoaded( lib) do
@@ -320,7 +322,7 @@ function startAnim(lib, anim)
 	end
 
 	TaskPlayAnim(ped, lib ,anim ,8.0, -8.0, -1, 0, 0, false, false, false )
-	if QBCore.PlayerData.job == 'police' then
+	if jobname == 'police' then
 		Citizen.Wait(2000)
 	else
 		Citizen.Wait(4000)
