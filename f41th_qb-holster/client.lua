@@ -144,7 +144,7 @@ Wait(1000)
 exports('GetCoreObject', function()
     return QBCore
 end)
-local QBCore = exports['qb-core']:GetObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 local Player = QBCore.Functions.GetPlayerData()
 
