@@ -36,8 +36,7 @@ Rewritten by f41th
  
  ## DISCLAIMER
  
- If there are any questions regarding the rewritten part, feel free to add me on Discord: f41th.999
- As far as I know, Otacon no longer offers support for this script
+I won´t provide support for this script any longer due to FiveM dying and my interest in FiveM decreasing to a null point.
  
  ## License
 
